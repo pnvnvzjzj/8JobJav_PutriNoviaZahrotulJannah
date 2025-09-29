@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Overriding;
+
+/**
+ *
+ * @author lenov
+ */
+public class SegiEmpat extends BangunDatar {
+    public double panjang;
+    public double lebar;
+    public double diagonal;
+    
+    public SegiEmpat(double panjang, double lebar){
+        this.panjang = panjang;
+        this.lebar = lebar;
+        this.diagonal = Math.sqrt((panjang*panjang) + (lebar*lebar));
+    }
+
+    public void hitungLuas(){
+        luas = panjang * lebar;
+    }
+
+    public void hitungKeliling(){
+        keliling = 2 * (panjang + lebar);
+    }
+
+    public void tampilData(){
+        System.out.println("PANJANG = " + panjang);
+        System.out.println("LEBAR = " + lebar);
+        System.out.println("DIAGONAL = " + diagonal);
+        super.tampilData();
+    }
+}
